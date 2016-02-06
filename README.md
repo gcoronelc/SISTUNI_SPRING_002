@@ -31,6 +31,7 @@
 - http://www.uv.es/grimo/teaching/SpringMVCv4PasoAPaso/index.html
 - http://gcoronelc.blogspot.pe/2011/02/libros-de-oracle.html
 - https://www.udemy.com/git-complete/
+- https://www.youtube.com/channel/UCeBr6E8TRP1pBDvkC9oqRhg
 
 
 # CLASE 01 
