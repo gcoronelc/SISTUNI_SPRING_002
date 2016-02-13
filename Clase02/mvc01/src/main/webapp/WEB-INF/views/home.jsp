@@ -10,5 +10,7 @@
 	<P>The time on the server is ${serverTime}.</P>
 	<p><a href="sumar.htm">Sumar</a>
 	<p><a href="promediar.htm">Promedio</a>
+	<p><a href="venta.htm">Venta</a>
+	<p><a href="productos">Catalogo</a>
 </body>
 </html>

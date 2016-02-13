@@ -13,12 +13,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import pe.egcc.mvc01.dto.VentaDto;
 import pe.egcc.mvc01.service.MateService;
+import pe.egcc.mvc01.service.VentaService;
 
 /**
  * Handles requests for the application home page.
@@ -28,6 +31,9 @@ public class HomeController {
 
 	@Autowired
 	private MateService mateService;
+	
+	@Autowired
+	private VentaService ventaService;
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
@@ -92,4 +98,15 @@ public class HomeController {
 		return view;
 	}
 
+	@RequestMapping(value = "venta.htm", method = RequestMethod.GET)
+	public String venta() {
+		return "ventaForm";
+	}	
+	
+	@RequestMapping(value = "vivaLaAmistad.htm", method = RequestMethod.POST)
+	public String promedio(@ModelAttribute VentaDto ventaDto) {
+		ventaService.procesar(ventaDto);
+		return "ventaRpta";
+	}
+	
 }

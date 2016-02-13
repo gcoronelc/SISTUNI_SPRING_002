@@ -14,4 +14,9 @@
   </p>
   <p>Menor: ${menor}</body>
   <p>Prom: ${prom}</body>
+  
+  <c:forEach begin="1" end="6" var="n">
+    <h${n}>ALIANZA CAMPEON</h${n}>
+  </c:forEach>
+  
 </html>
