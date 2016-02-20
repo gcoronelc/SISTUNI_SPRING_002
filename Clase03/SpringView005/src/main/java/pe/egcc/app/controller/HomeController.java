@@ -75,7 +75,7 @@ public class HomeController {
   public String otroError() throws Exception {
 
     logger.info("Generando una excepción.");
-    throw new Exception("Error de prueba.");
+    throw new Exception("Error de prueba ilustrativo.");
 
   }
 

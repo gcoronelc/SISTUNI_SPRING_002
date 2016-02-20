@@ -17,7 +17,7 @@
   <h1>GESTION DE ERRORES</h1>
   
   <a href="formulario.htm">Formulario</a>
-  <a href="pagina.htm" >Error 404</a>
+  <a href="paginaNoExiste.htm" >Error 404</a>
   <a href="otroError.htm" >Exception</a>
   <a href="division.htm?n1=15&n2=0" >División</a>
   

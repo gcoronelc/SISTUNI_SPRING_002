@@ -23,7 +23,10 @@ import com.lowagie.text.pdf.PdfWriter;
 public class ListaProductosPdfView extends AbstractPdfView {
 
   @Override
-  protected void buildPdfDocument(Map<String, Object> model, Document document, PdfWriter write, HttpServletRequest request, HttpServletResponse response) throws Exception {
+  protected void buildPdfDocument(Map<String, Object> model, 
+      Document document, PdfWriter write, 
+      HttpServletRequest request, HttpServletResponse response) 
+          throws Exception {
 
     @SuppressWarnings("unchecked")
     List<ProductoBean> listaProductos = (List<ProductoBean>) model.get("listaProductos");

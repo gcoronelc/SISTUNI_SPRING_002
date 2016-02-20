@@ -36,5 +36,10 @@ public class AppController {
 		List<ProductoBean> listaProductos = productoService.getListaProductos();
 		return new ModelAndView("listaProductosExcelView", "listaProductos", listaProductos);
 	}
+	
+	@RequestMapping(value = "/ListaAlumnos", method = RequestMethod.GET)
+  public ModelAndView getAlumnos() {
+    return new ModelAndView("listaAlumnos");
+  }
 
 }

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class SecondController {
   
-  @RequestMapping(value="division.htm")
+  @RequestMapping(value="/division.htm")
   public String doDividir(@RequestParam("n1") int n1, @RequestParam("n2") int n2, Model model){
     
     int rpta = n1 / n2;

@@ -28,7 +28,8 @@ public class EstudianteService {
 
   public boolean validar(EstudianteBean estudianteBean) {
     boolean rpta = false;
-    if (esCorrecta(estudianteBean.getNota1()) && esCorrecta(estudianteBean.getNota2())) {
+    if (esCorrecta(estudianteBean.getNota1()) 
+    		&& esCorrecta(estudianteBean.getNota2())) {
       rpta = true;
     }
     return rpta;

@@ -44,4 +44,5 @@ public class EstudianteValidator implements Validator {
     correcta = (nota >= 0 && nota <= 20) ? true : false;
     return correcta;
   }
+  
 }
