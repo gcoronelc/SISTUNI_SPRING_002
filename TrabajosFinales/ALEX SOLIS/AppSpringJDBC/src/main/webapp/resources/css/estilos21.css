@@ -1,0 +1,164 @@
+.prueba { background-color:#75A2FF; color:#006B9F; border-color:#AFCAE4 }
+
+
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt; border-color:#CCCCCC
+}
+th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt; border-color:#666666
+}
+SELECT {
+	FONT-SIZE: 7pt; FONT-FAMILY: Arial
+}
+INPUT {
+	FONT-SIZE: 8pt; FONT-FAMILY: Arial;
+}
+a:link    { color:#0099FF; font-weight:bold}
+a:visited { color:#0099FF; font-weight:bold }
+a:hover   { color:#66CCFF; font-weight:bold }
+a:active  { color:#0099FF; font-weight:bold }
+
+
+
+.itMenu { position: absolute; clip: rect( ); color:#FFFFFF; background:#FFFFFF; border-color:#999999; 
+			 visibility: hidden; ; cursor:pointer }
+.cabMenu { position: absolute; clip: rect( ); color:#FFFFFF; background-color:#000066; 
+			 font-family: Arial, Helvetica, sans-serif; font-size:8pt; 
+			 text-align:center; cursor:pointer; border-color:#33CCFF; border-width:1px; border-style:solid }
+.itMenuAct { background:#33FFCC; border-color:#999999; width: 160px }
+.itMenuDes { background-color:#EFEFEF; width: 160px; height: 18px; color:#000000; cursor:pointer}
+
+
+
+.textos {
+	font-size: 7pt; font-family: Arial; text-transform: uppercase; border:solid; border-width:1px;
+	border-color:#0099CC
+}
+.textos_deshab {
+	font-size: 7pt; font-family: Arial; text-transform: uppercase; border:solid; border-width:1px;
+	border-color:#0099CC; background-color:#CCCCCC
+}
+.boton{
+	font-size: 8pt; font-family: Arial; border: solid
+}
+.boton_img{	
+	font-weight: bold;
+	font-align: bottom;
+	border: 1px inset;
+	border-style:none;
+	clear: both;
+	background-position:center center;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+
+
+
+.tablas {
+	border-width:1px; border-color:#999999; border-collapse:collapse
+}
+.tablas2 {
+	border-width:1px; border-color:#666666; border-collapse:collapse
+}
+.cab_tablas {
+	background-color:#000066; color:#FFFFFF; text-align:center; font-weight:bold; font-size:7pt
+}
+.cab_tablas2 {
+	background-color:#CCFFCC; color:#000000; text-align:center; font-weight:bold; font-size:7pt
+}
+.cab_tablas3 {
+	background-color:#186495; color:#FFFFFF; text-align:center; font-weight:bold; font-size:7pt
+}
+.pie_tablas {
+	background-color:#D7D7D7; color:#000000; font-weight:bold; font-size:7pt
+}
+.fila_titulo1 {
+	background-color:#AFCAE4; color:#000000; font-weight:bold; font-size:7pt
+}
+.fila_titulo2 {
+	background-color:#DDF4FF; color:#000000; font-weight:bold; font-size:7pt
+}
+.fila_impar {
+	background-color:#DDECFE
+}
+.celda1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt; border-color:#999999
+}
+
+
+
+.titulo {
+font-family: Arial; font-size: 16pt; font-weight:bold; color:#336699
+}
+.subtitulo {
+font-family: Arial; font-size: 12pt; font-weight:bold; color:#336699
+}
+.subtitulo2 {
+font-family: Arial; font-size: 10pt; font-weight:bold; color:#336699
+}
+.subtitulo3 {
+font-family: Arial; font-size: 9pt; font-weight:bold; color:#336699
+}
+
+
+
+.bodystyle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+.small {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+}
+.medium {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.big {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+.xbig {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.expanded {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: 2px;
+}
+.justified {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+.footer {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 9px;
+	color: #999999;
+}
+.box1 {
+	padding: 3px;
+	border-width: medium;
+	border-style: solid;
+	border-color: #CCCCCC #666666 #666666 #CCCCCC;
+}
+.box2 {
+	font-style: italic;
+	word-spacing: 2pt;
+	padding: 3px;
+	border: 1px solid;
+}
+.Estilo2 {color: #FFFFFF}
+.Estilo4 {
+	font-size: 14pt;
+	color: #FFFF66;
+}
