@@ -20,8 +20,8 @@
 	<form:form commandName="estudianteBean" method="post"
 		action="doProcesarEstudiante.htm">
 
-		<fieldset style="width: 300px;">
-			<legend>Formulario</legend>
+		<fieldset style="width: 300px; margin: 10px;">
+			<legend>Ingrese los datos</legend>
 
 			<form:label cssClass="etiqueta" path="nombre">Nombre:</form:label>
 			<form:input path="nombre" />
@@ -36,7 +36,9 @@
 			<br />
 			
 		</fieldset>
-		<input type="submit" value="Procesar" />
+
+		<input style="width: 150px; height: 50px; margin: 10px;" 
+		  type="submit" value="Procesar" />
 
 	</form:form>
 
