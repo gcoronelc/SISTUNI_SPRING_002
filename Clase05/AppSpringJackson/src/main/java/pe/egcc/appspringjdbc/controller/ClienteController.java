@@ -1,5 +1,6 @@
 package pe.egcc.appspringjdbc.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.google.gson.Gson;
 
 import pe.egcc.appspringjdbc.domain.ClienteBean;
 import pe.egcc.appspringjdbc.service.ClienteService;
@@ -30,11 +29,13 @@ public class ClienteController {
   @RequestMapping(value = "getCliente.htm", method = RequestMethod.POST,
       produces="Application/json")
   @ResponseBody
-  public String getCliente(@RequestParam("codigo") String codigo) {
+  public ClienteBean getCliente(@RequestParam("codigo") String codigo) {
     ClienteBean bean = clienteService.getCliente(codigo);
-    Gson gson = new Gson();
-    String textoJson = gson.toJson(bean);
-    return textoJson;
+    if(bean == null){
+      bean= new ClienteBean();
+      bean.setCodigo("-1");
+    }
+    return bean;
   }
 
   @RequestMapping(value = "getClientes.htm", method = RequestMethod.GET)
@@ -42,12 +43,13 @@ public class ClienteController {
     return "getClientes";
   }
 
-  @RequestMapping(value = "getClientes.htm", method = RequestMethod.POST)
-  public String getClientes(@ModelAttribute ClienteBean clienteBean, Model model) {
+  @RequestMapping(value = "getClientes.htm", method = RequestMethod.POST,
+      produces="Application/json")
+  @ResponseBody
+  public List<ClienteBean> getClientes(@ModelAttribute ClienteBean clienteBean) {
     List<ClienteBean> lista;
     lista = clienteService.getClientes(clienteBean);
-    model.addAttribute("lista", lista);
-    return "getClientes";
+    return lista;
   }
 
   @RequestMapping(value = "insCliente.htm", method = RequestMethod.GET)
