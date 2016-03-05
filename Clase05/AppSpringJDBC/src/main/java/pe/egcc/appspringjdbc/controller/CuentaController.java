@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import pe.egcc.appspringjdbc.service.CuentaService;
@@ -31,12 +32,17 @@ public class CuentaController {
    * @param cuenta
    * @return
    */
-  @RequestMapping(value="getSaldo.htm", method=RequestMethod.POST)
-  public ModelAndView getSaldo(@RequestParam("cuenta") String cuenta){
+  @RequestMapping(value="getSaldo.htm", method=RequestMethod.POST,
+      produces="text/plain")
+  @ResponseBody
+  public String getSaldo(@RequestParam("cuenta") String cuenta){
     Double saldo = cuentaService.getSaldo(cuenta);
-    ModelAndView view = new ModelAndView("getSaldo");
-    view.addObject("saldo", saldo);
-    view.addObject("cuenta", cuenta);
-    return view;
+    String texto;
+    if(saldo == null){
+      texto = "No existe cuenta.";
+    } else {
+      texto = String.valueOf(saldo);
+    }
+    return texto;
   }
 }

@@ -6,17 +6,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" 
+src="<c:url value='/resources/jquery/jquery.js'/>"></script>
 </head>
 <body>
   <h1>CONSULTAR SALDO</h1>
-  <form method="post" action="getSaldo.htm">
+  <form id="form1" method="post" action="getSaldo.htm">
     Cuenta:<br/>
-    <input type="text" name="cuenta"/>
-    <input type="submit" value="Consultar"/>
+    <input type="text" id="cuenta" name="cuenta"/>
+    <input type="button" id="btnProcesar" value="Consultar"/>
   </form>
 
-  <p>Cuenta: ${cuenta}</p>
-  <p>Saldo : ${saldo}</p>
+  <p>Cuenta: <span id="txtCuenta"></span></p>
+  <p>Saldo : <span id="txtSaldo"></span></p>
   
+  <div id="divResultado"></div>
+  
+  <script type="text/javascript">
+  
+    $("#btnProcesar").click(function(){
+    	var data = $("#form1").serialize();
+    	var cuenta = $("#cuenta").val();
+    	$.post("getSaldo.htm",data,function(texto){
+    		// $("#divResultado").html(htmlPage);
+    		$("#txtCuenta").text(cuenta);
+    		$("#txtSaldo").text(texto);
+    	});
+    });
+  
+  </script>
 </body>
 </html>
